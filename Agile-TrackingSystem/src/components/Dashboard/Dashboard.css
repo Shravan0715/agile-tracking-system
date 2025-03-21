@@ -1,0 +1,276 @@
+  /* Dashboard container styles - Agile Theme */
+  .dashboard {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+      text-align: center;
+      animation: sprintCycle 0.5s ease-in;
+      background: linear-gradient(145deg, #f6f8fa, #e8f1f8);
+  }
+
+  @keyframes sprintCycle {
+      0% {
+          opacity: 0;
+          transform: translateY(-20px) rotate(-2deg);
+      }
+      100% {
+          opacity: 1;
+          transform: translateY(0) rotate(0);
+      }
+  }
+
+  h2 {
+      color: #ffffff;
+      margin-bottom: 30px;
+      animation: backlogEntry 0.8s ease-out;
+      background-color: #0066cc;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 102, 204, 0.2);
+      transition: all 0.4s ease;
+      width: 35%;
+      margin-left: auto;
+      margin-right: auto;
+      position: relative;
+      overflow: hidden;
+  }
+
+  @keyframes backlogEntry {
+      0% {
+          opacity: 0;
+          transform: translateX(-50px) scale(0.9);
+      }
+      100% {
+          opacity: 1;
+          transform: translateX(0) scale(1);
+      }
+  }
+
+  /* Sprint Planning Form */
+  form {
+      max-width: 500px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+      animation: planningPhase 0.6s ease-in-out;
+      border-left: 4px solid #284aa7;
+  }
+
+  @keyframes planningPhase {
+      0% {
+          transform: scale(0.95) translateY(20px);
+          opacity: 0;
+      }
+      100% {
+          transform: scale(1) translateY(0);
+          opacity: 1;
+      }
+  }
+
+  form div {
+      margin-bottom: 20px;
+      position: relative;
+  }
+
+  label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 600;
+      text-align: left;
+      animation: taskLabeling 0.4s ease-in;
+      color: #2c3e50;
+  }
+
+  @keyframes taskLabeling {
+      0% {
+          transform: translateX(-10px);
+          opacity: 0;
+      }
+      100% {
+          transform: translateX(0);
+          opacity: 1;
+      }
+  }
+
+  input, select {
+      width: 100%;
+      padding: 12px;
+      border: 2px solid #e1e4e8;
+      border-radius: 6px;
+      font-size: 14px;
+      transition: all 0.4s ease;
+      background-color: #f8f9fa;
+  }
+
+  input:focus, select:focus {
+      transform: scale(1.01);
+      border-color: #0066cc;
+      box-shadow: 0 0 8px rgba(0, 102, 204, 0.2);
+      background-color: #ffffff;
+  }
+
+  /* Sprint Actions */
+  button {
+      background-color: #0066cc;
+      color: white;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      margin: 10px;
+      transition: all 0.4s ease;
+      position: relative;
+      overflow: hidden;
+  }
+
+  button:hover {
+      background-color: #0052a3;
+      transform: translateY(-3px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+
+  button::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 5px;
+      height: 5px;
+      background: rgba(255, 255, 255, 0.5);
+      opacity: 0;
+      border-radius: 100%;
+      transform: scale(1, 1) translate(-50%);
+      transform-origin: 50% 50%;
+  }
+
+  button:hover::after {
+      animation: ripple 1s ease-out;
+  }
+
+  @keyframes ripple {
+      0% {
+          transform: scale(0, 0);
+          opacity: 0.5;
+      }
+      100% {
+          transform: scale(40, 40);
+          opacity: 0;
+      }
+  }
+
+  /* Sprint Backlog List */
+  ul {
+      list-style: none;
+      padding: 0;
+      margin: 20px 0;
+      display: grid;
+      gap: 15px;
+  }
+
+  li {
+      background-color: #ffffff;
+      margin: 10px 0;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      animation: taskEntry 0.5s ease-out;
+      transition: all 0.4s ease;
+      border-left: 4px solid #0066cc;
+  }
+
+  @keyframes taskEntry {
+      0% {
+          opacity: 0;
+          transform: translateY(20px) scale(0.95);
+      }
+      100% {
+          opacity: 1;
+          transform: translateY(0) scale(1);
+      }
+  }
+
+  li:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+      background-color: #f8f9fa;
+  }
+
+  a {
+      text-decoration: none;
+      color: #2c3e50;
+      transition: all 0.3s ease;
+      position: relative;
+  }
+
+  a:hover {
+      color: #0066cc;
+  }
+
+  a::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      bottom: -2px;
+      left: 0;
+      background-color: #0066cc;
+      transform: scaleX(0);
+      transition: transform 0.3s ease;
+  }
+
+  a:hover::after {
+      transform: scaleX(1);
+  }
+
+  /* Agile Board Responsive Design */
+  @media (max-width: 768px) {
+      .dashboard {
+          padding: 15px;
+      }
+
+      form {
+          max-width: 100%;
+          margin: 15px;
+      }
+
+      button {
+          width: 100%;
+          margin: 8px 0;
+      }
+
+      li {
+          flex-direction: column;
+          text-align: center;
+          padding: 15px;
+      }
+
+      li button {
+          margin-top: 15px;
+          width: 100%;
+      }
+
+      h2 {
+          width: 80%;
+      }
+  }
+
+  @media (max-width: 480px) {
+      h2 {
+          font-size: 1.4em;
+          width: 90%;
+      }
+
+      input, select {
+          font-size: 16px;
+          padding: 10px;
+      }
+
+      .dashboard {
+          padding: 10px;
+      }
+  }
