@@ -1,0 +1,217 @@
+  .user-profiles {
+      padding: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+      animation: fadeIn 0.5s ease-in;
+  }
+
+  h2 {
+      color: #2c3e50;
+      text-align: center;
+      margin-bottom: 30px;
+      animation: slideDown 0.6s ease-out;
+  }
+
+  .add-user-button {
+      background-color: #3498db;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: transform 0.2s, background-color 0.3s;
+  }
+
+  .add-user-button:hover {
+      background-color: #2980b9;
+      transform: scale(1.05);
+  }
+
+  .user-form {
+      background-color: #f8f9fa;
+      padding: 20px;
+      border-radius: 8px;
+      margin: 20px 0;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      animation: slideUp 0.5s ease-out;
+  }
+
+  .form-group {
+      margin-bottom: 15px;
+  }
+
+  input, select {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      transition: border-color 0.3s;
+  }
+
+  input:focus, select:focus {
+      border-color: #3498db;
+      outline: none;
+  }
+
+  table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      animation: slideDown 0.5s ease-in-out;
+      border: 2px solid black;
+      table-layout: fixed;
+      overflow-x: auto;
+  }
+
+  th, td {
+      padding: 12px 15px;
+      text-align: left;
+      border: 1px solid black;
+  }
+
+  th {
+      background-color: #f5f6fa;
+      color: #2c3e50;
+      font-weight: 600;
+      border: 1px solid black;
+  }
+
+  tr:hover {
+      background-color: #f8f9fa;
+      transition: background-color 0.3s ease;
+  }
+
+  tr:nth-child(even) {
+      background-color: #f9f9f9;
+  }
+
+  .user-list {
+      display: table;
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+      border: 2px solid black;
+  }
+
+  .user-card {
+      display: table-row;
+      background: white;
+      transition: background-color 0.3s;
+      animation: fadeIn 0.5s ease-in;
+      border: 1px solid black;
+  }
+
+  .user-card:hover {
+      background-color: #f8f9fa;
+  }
+
+  .task-list {
+      margin-top: 20px;
+      animation: slideUp 0.5s ease-out;
+  }
+
+  .task-item {
+      background-color: #ffffff;
+      padding: 15px;
+      margin-bottom: 10px;
+      border-radius: 6px;
+      border: 1px solid #dee2e6;
+      transition: transform 0.3s ease;
+  }
+
+  .task-item:hover {
+      transform: translateX(5px);
+  }
+
+  .task-info {
+      margin-bottom: 10px;
+  }
+
+  .status-badge {
+      padding: 4px 8px;
+      border-radius: 4px;
+      font-size: 0.9em;
+  }
+
+  .status-badge.to-do {
+      background-color: #ffebee;
+      color: #c62828;
+  }
+
+  .status-badge.in-progress {
+      background-color: #e3f2fd;
+      color: #1565c0;
+  }
+
+  .status-badge.done {
+      background-color: #e8f5e9;
+      color: #2e7d32;
+  }
+
+  .status-select {
+      width: 120px;
+      padding: 6px;
+      border-radius: 4px;
+      border: 1px solid #ced4da;
+      background-color: #ffffff;
+      transition: all 0.3s ease;
+  }
+
+  @keyframes fadeIn {
+      from {
+          opacity: 0;
+      }
+      to {
+          opacity: 1;
+      }
+  }
+
+  @keyframes slideDown {
+      from {
+          transform: translateY(-20px);
+          opacity: 0;
+      }
+      to {
+          transform: translateY(0);
+          opacity: 1;
+      }
+  }
+
+  @keyframes slideUp {
+      from {
+          transform: translateY(20px);
+          opacity: 0;
+      }
+      to {
+          transform: translateY(0);
+          opacity: 1;
+      }
+  }
+
+  .submit-button {
+      background-color: #2ecc71;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+  }
+
+  .submit-button:hover {
+      background-color: #27ae60;
+      transform: scale(1.05);
+  }
+
+  .error-message {
+      color: #e74c3c;
+      margin-top: 5px;
+      animation: shake 0.5s ease-in-out;
+  }
+
+  @keyframes shake {
+      0%, 100% { transform: translateX(0); }
+      25% { transform: translateX(-10px); }
+      75% { transform: translateX(10px); }
+  }
